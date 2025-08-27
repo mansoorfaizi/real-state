@@ -1,19 +1,13 @@
 from django.db import models
+from api.models.timestamp import Timestamp
 
-class Area(models.Model):
+class Area(Timestamp):
     name = models.CharField(max_length=45) 
     district = models.ForeignKey(
         "District",               
         on_delete=models.CASCADE, 
         related_name="areas",
         db_index=True            
-    )
-
-    timestamp = models.ForeignKey(
-        "Timestamp",              
-        on_delete=models.CASCADE, 
-        related_name="areas",
-        db_index=True             
     )
 
     def __str__(self):
