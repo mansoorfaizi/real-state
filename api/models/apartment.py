@@ -9,7 +9,6 @@ class Apartment(Timestamp):
     bedrooms = models.IntegerField(validators=[MinValueValidator(0)])
     bathrooms = models.IntegerField(validators=[MinValueValidator(0),])
     area = models.IntegerField(validators=[MinValueValidator(1)])
-
     balcony = models.BooleanField(default=False)
     elevator = models.BooleanField(default=False)
     parking = models.BooleanField(default=False)
