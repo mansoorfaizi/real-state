@@ -1,5 +1,4 @@
-from django.db import models
-from api.models.timestamp import Timestamp
+from api.models.timestamp import Timestamp, models
 from django.core.validators import MinValueValidator
 
 
@@ -16,7 +15,6 @@ class office(Timestamp):
     parking = models.BooleanField(default=False)
     security = models.BooleanField(default=True)
     toilet = models.CharField(max_length=10, choices=TOILET_CHOICES)
-
     property = models.ForeignKey(
         property,
         on_delete=models.CASCADE,

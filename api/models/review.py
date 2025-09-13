@@ -1,6 +1,5 @@
-from django.db import models
+from api.models.timestamp import Timestamp, models
 from django.core.validators import MinValueValidator, MaxValueValidator
-from api.models.timestamp import Timestamp
 from api.models.property import Property
 from django.contrib.auth.models import User
 

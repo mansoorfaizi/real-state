@@ -1,12 +1,9 @@
-from django.db import models
+from .timestamp import Timestamp, models
 
-
-class District(models.Timestamp):
+class District(Timestamp):
     name = models.CharField(max_length=45)
-
-    # Foreign keys
     province = models.ForeignKey(
-        'Province',  # assumes you already have a Province model
+        'Province',
         on_delete=models.CASCADE,
         related_name='districts'
     )

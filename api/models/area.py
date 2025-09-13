@@ -1,5 +1,4 @@
-from django.db import models
-from api.models.timestamp import Timestamp
+from api.models.timestamp import Timestamp, models
 
 class Area(Timestamp):
     name = models.CharField(max_length=45) 
